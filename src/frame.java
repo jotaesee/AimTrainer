@@ -184,19 +184,44 @@ public class frame implements ActionListener, MouseListener{
         }
         if (e.getSource()== Circle1 ) {
             if (i+1 != totalAmount){
-            Circle1.setBounds(random.nextInt(50, 430), random.nextInt(50, 422), 50, 50);
-            i++;}
+                int newX = random.nextInt(50,430);
+                int difference1 = Math.abs(newX-Circle2.getX());
+                int difference2 = Math.abs(newX-Circle3.getX());
+                while (difference2 < 50 || difference1 < 50 ) {
+                    newX = random.nextInt(50,430);
+                    difference1 = Math.abs(newX-Circle2.getX());
+                    difference2 = Math.abs(newX-Circle3.getX());
+                }
+                Circle1.setBounds(newX, random.nextInt(50, 422), 50, 50);
+                i++;
+            }
             else {i++; ending();}
         }
         if (e.getSource()== Circle2 ) {
             if (i+1 != totalAmount){
-                Circle2.setBounds(random.nextInt(50, 430), random.nextInt(50, 422), 50, 50);
+                int newX = random.nextInt(50,430);
+                int difference1 = Math.abs(newX-Circle1.getX());
+                int difference2 = Math.abs(newX-Circle3.getX());
+                while (difference2 < 50 || difference1 < 50 ) {
+                    newX = random.nextInt(50,430);
+                    difference1 = Math.abs(newX-Circle1.getX());
+                    difference2 = Math.abs(newX-Circle3.getX());
+                }
+                Circle2.setBounds(newX, random.nextInt(50, 422), 50, 50);
                 i++;}
             else {i++; ending();}
         }
         if (e.getSource()== Circle3 ) {
             if (i+1 != totalAmount){
-                Circle3.setBounds(random.nextInt(50, 430), random.nextInt(50, 422), 50, 50);
+                int newX = random.nextInt(50,430);
+                int difference1 = Math.abs(newX-Circle1.getX());
+                int difference2 = Math.abs(newX-Circle2.getX());
+                while (difference2 < 50 || difference1 <50 ){
+                    newX = random.nextInt(50,430);
+                    difference1 = Math.abs(newX-Circle2.getX());
+                    difference2 = Math.abs(newX-Circle1.getX());
+                }
+                Circle3.setBounds(newX, random.nextInt(50, 422), 50, 50);
                 i++;}
             else {i++; ending();}
         }
