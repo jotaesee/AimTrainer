@@ -10,7 +10,7 @@ public class frame implements ActionListener, MouseListener{
     JButton menuButton, restartButton, startButton, easyButton, normalButton, hardButton;
     int i = 0;
     JFrame frame;
-    ImageIcon diana = new ImageIcon("C:\\Users\\José\\IdeaProjects\\prubea981273912\\src\\diana.png");
+    ImageIcon diana = new ImageIcon("C:\\Users\\xx\\IdeaProjects\\prubea981273912\\src\\diana.png");
     JLabel Circle1, Circle2, Circle3, difficultyPicker, title, highscore;
     Random random;
     int totalAmount = 10;
